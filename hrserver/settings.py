@@ -1,10 +1,12 @@
 import os
 
 import django_heroku
+import dj_database_url
 
 
 PROJECT_DIR = os.path.dirname(os.path.abspath(__file__))
 BASE_DIR = os.path.dirname(PROJECT_DIR)
+DATABASE_URL = 'postgres://mtxqqkwlqyoror:f960ebecef55a3618454af1a2e1d07a1ee57fac34877d58978dd08acab44a9a7@ec2-174-129-224-157.compute-1.amazonaws.com:5432/dbarc0lcmjtbk'
 
 SECRET_KEY = '%w0+lqekh8r4rd-#pv77i$5cz90e(-oviau#=435qp9l2mj#vf'
 
@@ -52,11 +54,11 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'hrserver.wsgi.application'
 
+
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-    }
+    'default': dj_database_url.config(
+        default=DATABASE_URL, conn_max_age=600, ssl_require=True
+    ),
 }
 
 AUTH_PASSWORD_VALIDATORS = [
