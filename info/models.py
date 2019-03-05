@@ -24,6 +24,5 @@ class Staff(models.Model):
     def to_json(self):
         dict_ = self.to_dict()
         json_string = json.dumps(dict_)
-        print(json_string)
         return json_string
 
