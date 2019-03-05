@@ -1,9 +1,10 @@
 import os
 
+import django_heroku
+
 
 PROJECT_DIR = os.path.dirname(os.path.abspath(__file__))
 BASE_DIR = os.path.dirname(PROJECT_DIR)
-STATIC_ROOT = os.path.join(PROJECT_DIR, 'static')
 
 SECRET_KEY = '%w0+lqekh8r4rd-#pv77i$5cz90e(-oviau#=435qp9l2mj#vf'
 
@@ -84,3 +85,5 @@ USE_L10N = True
 USE_TZ = True
 
 STATIC_URL = '/static/'
+
+django_heroku.settings(locals())
