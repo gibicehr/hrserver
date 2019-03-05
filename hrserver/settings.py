@@ -15,6 +15,7 @@ DEBUG = True
 ALLOWED_HOSTS = []
 
 INSTALLED_APPS = [
+    'index.apps.IndexConfig',
     'info.apps.InfoConfig',
     'django.contrib.admin',
     'django.contrib.auth',
