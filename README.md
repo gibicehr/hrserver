@@ -13,7 +13,7 @@ HR server for GIB ICE project.
 
 * **Success Response:**
   
-  <_What should the status code be on success and returned data? _>
+  <_What should the status code be on success and returned data?_>
 
   * **Code:** 200 <br />
     **Content:** `{"id": "00003332", "first_name": "Lidiya", "last_name": "Joshua", "email": "lidiyajoshua@example.com"}`
