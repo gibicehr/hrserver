@@ -10,7 +10,7 @@ DATABASE_URL = 'postgres://mtxqqkwlqyoror:f960ebecef55a3618454af1a2e1d07a1ee57fa
 
 SECRET_KEY = '%w0+lqekh8r4rd-#pv77i$5cz90e(-oviau#=435qp9l2mj#vf'
 
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = []
 
